@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estagio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+  <!--ESTRUTURA DO INPUT-->
+    <p class="text-start mt-4 ms-5">Insira sua idade abaixo:</p>
+    <div class="row g-3 align-items-center ms-5 mt-1 position-absolute top-20">
+        <div class="col-auto">
+          <label for="inputAge" class="col-form-label">Idade:</label>
+        </div>
+        <div class="col-auto">
+          <input type="number" id="inputAge" class="form-control" aria-describedby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+          <button id="btnSomar" type="button" class="btn btn-primary ms-1" onclick="teste()">Enviar</button>
+        </div>
+      </div>
+    
+</body>
+</html>
+
+<script>
+    //FUNCAO MOSTRAR IDADE
+    function teste() {
+        var idade = document.getElementById("inputAge").value;
+        console.log("\nidade: " +idade);
+
+    //ESTRUTURA PARA DIMINUIR IDADE ATÉ 0    
+    for (var i = idade; i >= 0 ; i--){
+            console.log(i);
+        }
+    //ESTRUTURA PARA MOSTRAR OS PARES    
+        var pares =1 ;
+    while (pares<=idade) {
+        var resto = pares%2;
+        if (resto ==0){
+            console.log("\nPar: " + pares);
+        }
+        pares = pares + 1;
+    }
+}
+</script>
